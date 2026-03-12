@@ -1,0 +1,301 @@
+text,intent
+hi,greeting
+hello,greeting
+hey,greeting
+hey there,greeting
+hi there,greeting
+good morning,greeting
+good afternoon,greeting
+good evening,greeting
+what's up,greeting
+howdy,greeting
+greetings,greeting
+sup,greeting
+yo,greeting
+hiya,greeting
+hello there,greeting
+hi aniket,greeting
+hey aniket,greeting
+hello aniket,greeting
+start,greeting
+begin,greeting
+what are your skills,skills
+what skills do you have,skills
+tell me about your skills,skills
+what technologies do you know,skills
+what is your tech stack,skills
+what can you code,skills
+what programming do you know,skills
+what tools do you use,skills
+what languages do you know,skills
+show me your technical skills,skills
+frontend skills,skills
+backend skills,skills
+what frameworks do you use,skills
+react skills,skills
+python skills,skills
+javascript skills,skills
+nodejs experience,skills
+mongodb skills,skills
+what are your technical abilities,skills
+which technologies are you proficient in,skills
+what software do you know,skills
+list your skills,skills
+skills and technologies,skills
+what do you specialise in,skills
+full stack skills,skills
+mern stack skills,skills
+what databases do you know,skills
+what are your programming abilities,skills
+tell me your tech,skills
+what coding skills do you have,skills
+do you know redux,skills
+do you know graphql,skills
+are you good at css,skills
+html skills,skills
+what projects have you built,projects
+show me your projects,projects
+tell me about your work,projects
+what have you made,projects
+portfolio projects,projects
+what apps have you developed,projects
+show all projects,projects
+list your projects,projects
+what have you created,projects
+what applications have you built,projects
+show me what you have built,projects
+your developments,projects
+what did you make,projects
+recent projects,projects
+latest project,projects
+show me your recent work,projects
+what is your best project,projects
+how many projects do you have,projects
+tell me about nextmart,projects
+tell me about ecommerce project,projects
+nextmart project,projects
+mern ecommerce,projects
+ecommerce website,projects
+tell me about green hand,projects
+green hand project,projects
+crop recommendation,projects
+price prediction project,projects
+agriculture project,projects
+tell me about chat buddies,projects
+chat buddies project,projects
+real time chat,projects
+chatting app,projects
+messaging app,projects
+tell me about lunexa,projects
+lunexa project,projects
+virtual assistant project,projects
+voice assistant,projects
+voice app,projects
+tell me about resume builder,projects
+ai resume builder,projects
+resume project,projects
+ai powered resume,projects
+tell me about weather app,projects
+weather forecast project,projects
+weather application,projects
+tell me about video calling app,projects
+webrtc project,projects
+video calling,projects
+video chat project,projects
+what is your experience,experience
+work experience,experience
+where have you worked,experience
+job history,experience
+career history,experience
+what companies have you worked at,experience
+tell me about your career,experience
+what roles have you had,experience
+professional experience,experience
+codsoft,experience
+internship experience,experience
+where did you intern,experience
+shadowfox,experience
+shadowfox internship,experience
+tell me about your internship,experience
+have you done any internship,experience
+work history,experience
+previous jobs,experience
+what did you do at codsoft,experience
+what did you do at shadowfox,experience
+professional background,experience
+industry experience,experience
+what is your education,education
+where did you study,education
+what degree do you have,education
+which university,education
+college background,education
+what did you study,education
+educational background,education
+what is your cgpa,education
+narula institute,education
+computer science degree,education
+graduation year,education
+academic background,education
+what college are you from,education
+which engineering college,education
+b tech,education
+btech,education
+cse branch,education
+computer science engineering,education
+what is your gpa,education
+what year are you in,education
+are you a student,education
+undergraduate degree,education
+narula institute of technology,education
+how can i contact you,contact
+what is your email,contact
+how do i reach you,contact
+contact information,contact
+get in touch,contact
+what is your linkedin,contact
+what is your github,contact
+phone number,contact
+how to connect with you,contact
+share your contact details,contact
+email address,contact
+social media profiles,contact
+where can i find you online,contact
+github profile,contact
+linkedin profile,contact
+how do i message you,contact
+whats your email id,contact
+give me your number,contact
+how to reach aniket,contact
+contact aniket,contact
+drop you a message,contact
+are you available for hire,hiring
+are you looking for a job,hiring
+open to work,hiring
+can i hire you,hiring
+are you freelancing,hiring
+available for freelance,hiring
+looking for opportunities,hiring
+are you open to new roles,hiring
+seeking employment,hiring
+job opportunities,hiring
+available for projects,hiring
+want to collaborate,hiring
+are you jobless,hiring
+do you take freelance work,hiring
+available for full time,hiring
+are you a fresher,hiring
+can i offer you a job,hiring
+want to work with you,hiring
+interested in working with me,hiring
+are you actively looking,hiring
+open for internship,hiring
+tell me about react,technology
+how good are you at react,technology
+experience with nodejs,technology
+python experience,technology
+do you know mongodb,technology
+how well do you know javascript,technology
+tailwind css skills,technology
+express js experience,technology
+do you know sql,technology
+firebase experience,technology
+socket io experience,technology
+flask experience,technology
+django knowledge,technology
+git experience,technology
+vercel deployment,technology
+how good are you at node,technology
+tell me about your python skills,technology
+how well do you know react,technology
+what do you know about mongodb,technology
+redux experience,technology
+do you know graphql,technology
+webrtc experience,technology
+mysql knowledge,technology
+render deployment,technology
+how do you use firebase,technology
+what is your javascript level,technology
+how good is your css,technology
+do you know html,technology
+tell me about your certificates,certificates
+what certifications do you have,certificates
+show me your achievements,certificates
+what hackathons have you done,certificates
+have you won any awards,certificates
+your accomplishments,certificates
+what courses have you completed,certificates
+tell me about sih,certificates
+smart india hackathon,certificates
+hack o nit,certificates
+ihmmc certificate,certificates
+ideon 2025,certificates
+java certificate,certificates
+python certificate,certificates
+web development certificate,certificates
+ai ml internship,certificates
+code war workshop,certificates
+what competitions have you participated in,certificates
+tell me about yourself,about
+who are you,about
+who is aniket,about
+introduce yourself,about
+about you,about
+what do you do,about
+tell me about aniket das,about
+your background,about
+describe yourself,about
+what is your passion,about
+what are your interests,about
+what do you like to do,about
+are you a developer,about
+are you into machine learning,about
+are you a full stack developer,about
+what is your goal,about
+what motivates you,about
+tell me more about you,about
+your story,about
+what kind of developer are you,about
+who are you exactly,about
+aniket das,about
+what do you study,about
+what is your field,about
+thank you,thanks
+thanks,thanks
+thanks a lot,thanks
+that was helpful,thanks
+great thanks,thanks
+awesome thanks,thanks
+much appreciated,thanks
+cheers,thanks
+very helpful,thanks
+nice,thanks
+cool,thanks
+great,thanks
+wonderful,thanks
+perfect,thanks
+bye,goodbye
+goodbye,goodbye
+see you later,goodbye
+see ya,goodbye
+take care,goodbye
+talk later,goodbye
+gotta go,goodbye
+catch you later,goodbye
+have a good day,goodbye
+good night,goodbye
+later,goodbye
+see you,goodbye
+help,help
+what can you do,help
+how can you help me,help
+what can i ask you,help
+what do you know,help
+commands,help
+options,help
+what should i ask,help
+guide me,help
+show me what you can do,help
+what topics can we discuss,help
+what are you capable of,help
+how does this work,help
+what questions can i ask,help
