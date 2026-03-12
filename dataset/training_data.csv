@@ -19,6 +19,22 @@ hey aniket,greeting
 hello aniket,greeting
 start,greeting
 begin,greeting
+good day,greeting
+hey how are you,greeting
+hello how are you,greeting
+hi how are you,greeting
+morning,greeting
+whats up,greeting
+hey what is up,greeting
+hi good morning,greeting
+hey good evening,greeting
+namaste,greeting
+hello friend,greeting
+hey buddy,greeting
+hi can you help me,greeting
+hello i need help,greeting
+hey i have a question,greeting
+hi i want to know something,greeting
 what are your skills,skills
 what skills do you have,skills
 tell me about your skills,skills
@@ -53,6 +69,29 @@ do you know redux,skills
 do you know graphql,skills
 are you good at css,skills
 html skills,skills
+what are you good at technically,skills
+show me all your skills,skills
+what is your strongest skill,skills
+what technologies are you comfortable with,skills
+what stack do you work with,skills
+are you a frontend or backend developer,skills
+what is your primary skill,skills
+technical expertise,skills
+what development skills do you have,skills
+do you know tailwind css,skills
+are you good at react,skills
+can you work with node,skills
+do you know express,skills
+what is your main language,skills
+do you code in python,skills
+are you proficient in javascript,skills
+what markup languages do you know,skills
+do you know any css frameworks,skills
+do you use any version control,skills
+what deployment platforms do you know,skills
+do you work with apis,skills
+have you worked with rest apis,skills
+do you know socket programming,skills
 what projects have you built,projects
 show me your projects,projects
 tell me about your work,projects
@@ -102,6 +141,33 @@ tell me about video calling app,projects
 webrtc project,projects
 video calling,projects
 video chat project,projects
+show me your github projects,projects
+walk me through your projects,projects
+what software have you shipped,projects
+describe your portfolio work,projects
+what is the nextmart app,projects
+explain the chat buddies app,projects
+how does lunexa work,projects
+what does green hand do,projects
+tell me about your ecommerce site,projects
+explain the resume builder,projects
+what is the webrtc app about,projects
+describe nextmart,projects
+describe green hand,projects
+describe chat buddies,projects
+describe lunexa,projects
+describe resume builder,projects
+describe weather app,projects
+describe video calling app,projects
+what was your most challenging project,projects
+which project are you most proud of,projects
+what full stack projects have you built,projects
+do you have any ml projects,projects
+show me a machine learning project,projects
+what is your most recent project,projects
+have you built any chat applications,projects
+have you built any ecommerce apps,projects
+have you worked on any ai projects,projects
 what is your experience,experience
 work experience,experience
 where have you worked,experience
@@ -124,6 +190,32 @@ what did you do at codsoft,experience
 what did you do at shadowfox,experience
 professional background,experience
 industry experience,experience
+how long have you been working,experience
+how many internships have you done,experience
+what was your role at codsoft,experience
+what was your role at shadowfox,experience
+describe your work experience,experience
+what industry have you worked in,experience
+have you done freelance work,experience
+what responsibilities have you had,experience
+tell me about your professional journey,experience
+what positions have you held,experience
+have you worked full time,experience
+what was your job title,experience
+what did you do professionally,experience
+what companies hired you,experience
+did you work as a developer,experience
+were you a frontend developer,experience
+tell me about codsoft internship,experience
+tell me about shadowfox internship,experience
+how was your internship experience,experience
+what did you learn at your internship,experience
+what skills did you gain from work,experience
+how much experience do you have,experience
+are you an experienced developer,experience
+do you have any work experience,experience
+have you worked on real projects,experience
+have you worked in a company,experience
 what is your education,education
 where did you study,education
 what degree do you have,education
@@ -147,6 +239,30 @@ what year are you in,education
 are you a student,education
 undergraduate degree,education
 narula institute of technology,education
+what is your qualification,education
+what is your academic record,education
+when did you graduate,education
+are you currently studying,education
+what branch of engineering,education
+what semester are you in,education
+which campus are you from,education
+are you in final year,education
+tell me about your college,education
+what is your college name,education
+where are you pursuing your degree,education
+what score did you get,education
+is your cgpa good,education
+tell me about your academic background,education
+what course are you doing,education
+what engineering stream,education
+are you doing computer science,education
+have you completed your degree,education
+do you have a degree in programming,education
+when will you graduate,education
+what year did you join college,education
+tell me about narula institute,education
+are you from kolkata,education
+which city is your college in,education
 how can i contact you,contact
 what is your email,contact
 how do i reach you,contact
@@ -168,6 +284,24 @@ give me your number,contact
 how to reach aniket,contact
 contact aniket,contact
 drop you a message,contact
+how do i send you an email,contact
+where do you hang out online,contact
+how do i follow you,contact
+give me all your social links,contact
+how can someone reach you,contact
+drop me your linkedin,contact
+drop me your github,contact
+what is your portfolio link,contact
+how do i connect on linkedin,contact
+share your email please,contact
+can i have your phone number,contact
+i want to email you,contact
+i want to message you,contact
+how do i get in touch,contact
+what is the best way to contact you,contact
+send me your contact info,contact
+can you share your details,contact
+where can i see your work online,contact
 are you available for hire,hiring
 are you looking for a job,hiring
 open to work,hiring
@@ -189,6 +323,24 @@ want to work with you,hiring
 interested in working with me,hiring
 are you actively looking,hiring
 open for internship,hiring
+are you open to relocation,hiring
+would you join our company,hiring
+can i recruit you,hiring
+are you placement ready,hiring
+looking for a developer,hiring
+can i work with you,hiring
+do you do contract work,hiring
+available for remote work,hiring
+are you open to remote jobs,hiring
+do you work as a freelancer,hiring
+can you join immediately,hiring
+what is your notice period,hiring
+when can you start,hiring
+are you available right now,hiring
+are you open to startup opportunities,hiring
+would you consider part time work,hiring
+are you interested in internship offers,hiring
+would you work for a small company,hiring
 tell me about react,technology
 how good are you at react,technology
 experience with nodejs,technology
@@ -217,6 +369,33 @@ how do you use firebase,technology
 what is your javascript level,technology
 how good is your css,technology
 do you know html,technology
+are you comfortable with react,technology
+can you work with express,technology
+have you used socket io before,technology
+how experienced are you with flask,technology
+do you use git regularly,technology
+have you deployed on vercel,technology
+have you used render before,technology
+explain your react experience,technology
+tell me about your node experience,technology
+how do you use mongodb in projects,technology
+what do you build with python,technology
+how do you handle state in react,technology
+do you use react hooks,technology
+have you worked with rest apis in node,technology
+do you know mongoose,technology
+how do you use express middleware,technology
+have you built real time apps,technology
+tell me about your socket io projects,technology
+how do you use firebase auth,technology
+do you know firestore,technology
+have you used jwt,technology
+how do you deploy react apps,technology
+tell me about your css skills,technology
+do you know flexbox and grid,technology
+how do you use python for ml,technology
+what ml libraries do you know,technology
+do you know scikit learn,technology
 tell me about your certificates,certificates
 what certifications do you have,certificates
 show me your achievements,certificates
@@ -235,6 +414,30 @@ web development certificate,certificates
 ai ml internship,certificates
 code war workshop,certificates
 what competitions have you participated in,certificates
+hackathon experience,certificates
+have you participated in sih,certificates
+did you win any hackathon,certificates
+how many certificates do you have,certificates
+what online courses have you done,certificates
+tell me about your achievements,certificates
+do you have any nptel certificates,certificates
+eduskill internship,certificates
+have you done any workshops,certificates
+tell me about hack o nit,certificates
+tell me about ideon,certificates
+what is ihmmc,certificates
+shadowfox certificate,certificates
+codsoft certificate,certificates
+have you done any ai internship,certificates
+what programming certificates do you have,certificates
+do you have a java certification,certificates
+do you have a python certification,certificates
+have you completed any web development course,certificates
+what competitions did you compete in,certificates
+have you participated in any events,certificates
+tell me about your extracurricular,certificates
+what is your biggest achievement,certificates
+have you represented your college,certificates
 tell me about yourself,about
 who are you,about
 who is aniket,about
@@ -259,6 +462,29 @@ who are you exactly,about
 aniket das,about
 what do you study,about
 what is your field,about
+give me a brief introduction,about
+tell me something about yourself,about
+what is your professional summary,about
+are you passionate about coding,about
+what drives you,about
+what inspires you,about
+what are your strengths,about
+are you good at problem solving,about
+what type of work do you enjoy,about
+do you enjoy building web apps,about
+are you interested in ai,about
+what are you currently working on,about
+what are your hobbies,about
+do you contribute to open source,about
+what is your development philosophy,about
+what makes you unique as a developer,about
+how did you get into coding,about
+why did you choose computer science,about
+tell me your background,about
+what is your journey as a developer,about
+how long have you been coding,about
+what are you learning currently,about
+where do you see yourself in 5 years,about
 thank you,thanks
 thanks,thanks
 thanks a lot,thanks
@@ -273,6 +499,28 @@ cool,thanks
 great,thanks
 wonderful,thanks
 perfect,thanks
+that is great,thanks
+that is awesome,thanks
+that is cool,thanks
+that is wonderful,thanks
+that is perfect,thanks
+this is helpful,thanks
+this is great,thanks
+this is amazing,thanks
+you are helpful,thanks
+you are amazing,thanks
+you are great,thanks
+appreciate it,thanks
+thank you so much,thanks
+thanks for the info,thanks
+thanks for telling me,thanks
+that helped,thanks
+this helped me,thanks
+good job,thanks
+well done,thanks
+excellent,thanks
+superb,thanks
+brilliant,thanks
 bye,goodbye
 goodbye,goodbye
 see you later,goodbye
@@ -285,6 +533,22 @@ have a good day,goodbye
 good night,goodbye
 later,goodbye
 see you,goodbye
+have a great day,goodbye
+have a nice day,goodbye
+see you soon,goodbye
+until next time,goodbye
+i have to go,goodbye
+i am leaving,goodbye
+farewell,goodbye
+adios,goodbye
+cya,goodbye
+ttyl,goodbye
+i will talk to you later,goodbye
+it was nice talking to you,goodbye
+thanks goodbye,goodbye
+ok bye,goodbye
+alright bye,goodbye
+ok goodbye,goodbye
 help,help
 what can you do,help
 how can you help me,help
@@ -299,3 +563,647 @@ what topics can we discuss,help
 what are you capable of,help
 how does this work,help
 what questions can i ask,help
+i need help,help
+can you help me,help
+i am confused,help
+i dont know what to ask,help
+what information do you have,help
+what are your features,help
+tell me what you can do,help
+how to use this chatbot,help
+what is available here,help
+i need guidance,help
+how do i use you,help
+what should i start with,help
+where do i begin,help
+give me a menu,help
+show me options,help
+what all can i ask,help
+list your capabilities,help
+what are the topics,help
+can you tell me about everything,help
+give me an overview,help
+what kind of questions can i ask,help
+tell me the available topics,help
+i want to explore,help
+hey good morning,greeting
+good morning aniket,greeting
+hello good afternoon,greeting
+hey good afternoon,greeting
+good evening aniket,greeting
+hi there how can i help,greeting
+hello nice to meet you,greeting
+hey nice to meet you,greeting
+hi i am here,greeting
+hello i am back,greeting
+hey i am back,greeting
+hi again,greeting
+hello again,greeting
+what is up aniket,greeting
+hey there how are you doing,greeting
+hi how is it going,greeting
+hello how is everything,greeting
+hey whats going on,greeting
+hi there good to see you,greeting
+hello there good to see you,greeting
+good to see you,greeting
+nice to see you,greeting
+hey there buddy,greeting
+hello there friend,greeting
+hi there pal,greeting
+are you there,greeting
+anyone there,greeting
+hello is anyone there,greeting
+hey are you awake,greeting
+hi bot,greeting
+hello bot,greeting
+hey chatbot,greeting
+hi assistant,greeting
+hello assistant,greeting
+what are all your technical skills,skills
+can you tell me your full stack,skills
+show me your complete tech stack,skills
+what technologies have you mastered,skills
+what is your programming expertise,skills
+which frontend technologies do you use,skills
+which backend technologies do you use,skills
+what database technologies do you know,skills
+tell me about your development skills,skills
+what is your core technical skill,skills
+what languages are you best at,skills
+are you skilled in react,skills
+are you skilled in python,skills
+are you skilled in nodejs,skills
+how comfortable are you with javascript,skills
+tell me about your frontend expertise,skills
+tell me about your backend expertise,skills
+what tools do you work with daily,skills
+which ide do you use,skills
+do you know any cloud platforms,skills
+what version control do you use,skills
+do you know docker,skills
+are you familiar with agile,skills
+do you practice clean code,skills
+do you write unit tests,skills
+how do you manage state in react,skills
+are you good at responsive design,skills
+can you build mobile friendly websites,skills
+do you know css animations,skills
+have you used any component libraries,skills
+do you know material ui,skills
+have you used bootstrap,skills
+are you familiar with webpack,skills
+do you know npm,skills
+do you know yarn,skills
+have you used vite,skills
+do you know how to use postman,skills
+have you worked with rest api,skills
+do you know json,skills
+what is your experience with git,skills
+can you build full stack apps,skills
+are you a mern stack developer,skills
+what is your strongest programming language,skills
+describe the nextmart project in detail,projects
+what features does nextmart have,projects
+how did you build nextmart,projects
+what is the tech behind nextmart,projects
+tell me more about green hand,projects
+what problem does green hand solve,projects
+how does the crop recommendation work,projects
+what ml model did you use in green hand,projects
+tell me more about chat buddies,projects
+what features does chat buddies have,projects
+how did you implement real time chat,projects
+how does socket io work in chat buddies,projects
+tell me more about lunexa,projects
+what can lunexa do,projects
+how does the voice assistant work,projects
+what apis did you use in lunexa,projects
+tell me more about the resume builder,projects
+how does the ai resume builder work,projects
+what ai is used in the resume builder,projects
+tell me more about the weather app,projects
+how does the weather forecast work,projects
+which api did you use for weather,projects
+tell me more about the video calling app,projects
+how does the webrtc video app work,projects
+what is peer to peer video,projects
+how did you implement video calling,projects
+do you have any deployed projects,projects
+are all your projects live,projects
+can i see your live projects,projects
+what is the live link for nextmart,projects
+what is the live link for chat buddies,projects
+what is the link for lunexa,projects
+what is the link for green hand,projects
+where is your resume builder hosted,projects
+give me links to your projects,projects
+show me your deployed apps,projects
+how many projects have you deployed,projects
+what was the hardest project to build,projects
+which project took the longest,projects
+what did you learn from your projects,projects
+which project has the most features,projects
+do you have any open source projects,projects
+can i contribute to your projects,projects
+where is the source code for your projects,projects
+what is the github link for nextmart,projects
+what is the github link for chat buddies,projects
+what is the github link for lunexa,projects
+did you work alone on your projects,projects
+did you build everything yourself,projects
+are your projects solo or team,projects
+what type of projects have you built,projects
+have you built any social media apps,projects
+have you built any productivity apps,projects
+have you built any fintech apps,projects
+tell me about your internship at codsoft,experience
+what did you learn at codsoft,experience
+how long was your codsoft internship,experience
+what was your work like at codsoft,experience
+what technologies did you use at codsoft,experience
+tell me about your internship at shadowfox,experience
+what did you learn at shadowfox,experience
+how long was your shadowfox internship,experience
+what was your work like at shadowfox,experience
+what technologies did you use at shadowfox,experience
+did you get a certificate from codsoft,experience
+did you get a certificate from shadowfox,experience
+how was working at codsoft,experience
+how was working at shadowfox,experience
+what projects did you build at codsoft,experience
+what projects did you build at shadowfox,experience
+were you a paid intern,experience
+was your internship remote or offline,experience
+did you work in a team during internship,experience
+what was your biggest learning from internship,experience
+how did you get the codsoft internship,experience
+how did you get the shadowfox internship,experience
+what was your internship duration,experience
+did your internship help you grow,experience
+what soft skills did you gain from internship,experience
+did you receive any feedback at work,experience
+what was the tech stack at codsoft,experience
+what was the tech stack at shadowfox,experience
+are you currently working anywhere,experience
+are you currently doing any internship,experience
+do you have any full time experience,experience
+have you freelanced for clients,experience
+tell me about your freelance work,experience
+what kind of clients have you worked with,experience
+what is your total work experience,experience
+what university did you go to,education
+what is the full name of your college,education
+where is narula institute of technology located,education
+is narula institute a good college,education
+what is your current semester,education
+when did you start your btech,education
+what is your expected graduation year,education
+what subjects have you studied,education
+have you studied data structures,education
+have you studied algorithms,education
+have you studied operating systems,education
+have you studied computer networks,education
+have you studied database management,education
+have you studied machine learning in college,education
+what electives have you taken,education
+are you in the computer science department,education
+what is your roll number,education
+how is your academic performance,education
+are you in the top of your class,education
+have you been on the honor roll,education
+do you have any backlogs,education
+what programming subjects did you study,education
+did your college teach you react,education
+did your college teach you nodejs,education
+how much of your skills are self taught,education
+did you learn full stack in college,education
+what did you study beyond your syllabus,education
+do you have a good relationship with professors,education
+have you done any college projects,education
+tell me about your college projects,education
+what year did you complete your 12th,education
+what was your 12th percentage,education
+which board did you study under,education
+are you from west bengal,education
+which state is narula institute in,education
+is narula institute affiliated to makaut,education
+what is makaut,education
+what is your contact email,contact
+what email should i use to contact you,contact
+is your email active,contact
+how fast do you reply to emails,contact
+what is your professional email,contact
+what is your linkedin url,contact
+are you active on linkedin,contact
+do you post on linkedin,contact
+what is your github username,contact
+how many repos do you have on github,contact
+is your github profile public,contact
+do you have a portfolio website,contact
+what is your portfolio url,contact
+share your portfolio,contact
+do you have a resume,contact
+can i download your resume,contact
+how can a recruiter contact you,contact
+what is the best platform to reach you,contact
+do you respond to linkedin messages,contact
+are you on twitter,contact
+are you on instagram,contact
+do you have any other social profiles,contact
+whats the fastest way to reach you,contact
+can i call you,contact
+do you have a whatsapp,contact
+what time zone are you in,contact
+when are you available to talk,contact
+can i schedule a call with you,contact
+how do i book a meeting with you,contact
+can you share a calendly link,contact
+are you actively checking your email,contact
+do you check linkedin regularly,contact
+would you respond to a cold email,contact
+would you respond to a linkedin connection request,contact
+are you willing to relocate for work,hiring
+are you open to on site jobs,hiring
+are you looking for remote only jobs,hiring
+would you work in a hybrid role,hiring
+what kind of company are you looking for,hiring
+what is your preferred work environment,hiring
+are you open to startup jobs,hiring
+would you join a product based company,hiring
+would you join a service based company,hiring
+what is your salary expectation,hiring
+are you negotiable on salary,hiring
+when are you available to join,hiring
+can you join in one month,hiring
+are you currently placed,hiring
+have you sat for campus placements,hiring
+are you appearing for off campus drives,hiring
+what roles are you applying for,hiring
+are you applying for full stack roles,hiring
+are you applying for frontend roles,hiring
+are you applying for backend roles,hiring
+are you applying for ml roles,hiring
+would you work as a react developer,hiring
+would you work as a python developer,hiring
+would you work as a mern stack developer,hiring
+are you looking for product roles,hiring
+are you interested in a tech lead role,hiring
+are you open to junior developer positions,hiring
+what is your preferred tech stack for work,hiring
+would you relocate to bangalore,hiring
+would you relocate to mumbai,hiring
+would you relocate to hyderabad,hiring
+would you work for a foreign company,hiring
+are you open to international opportunities,hiring
+can you work in a us time zone,hiring
+how experienced are you with react hooks,technology
+have you used useeffect and usestate,technology
+do you know usecallback and usememo,technology
+have you used react router,technology
+do you know react context api,technology
+have you used redux toolkit,technology
+explain how redux works,technology
+have you used axios for api calls,technology
+do you know fetch api,technology
+have you worked with json web tokens,technology
+how do you handle authentication in node,technology
+have you implemented oauth,technology
+do you know bcrypt,technology
+have you used dotenv,technology
+how do you handle environment variables,technology
+have you used nodemon,technology
+have you used express validator,technology
+how do you validate forms in react,technology
+have you used formik or react hook form,technology
+do you know how to paginate results,technology
+have you implemented search functionality,technology
+how do you handle file uploads,technology
+have you used multer,technology
+have you used cloudinary,technology
+how do you optimize react performance,technology
+have you used lazy loading in react,technology
+do you know code splitting,technology
+have you used react suspense,technology
+how do you debug nodejs apps,technology
+have you used postman for api testing,technology
+have you written any unit tests,technology
+do you know jest,technology
+have you used mocha or chai,technology
+how do you handle errors in express,technology
+have you used try catch in async functions,technology
+do you know promise chaining,technology
+how do you use async await,technology
+have you built any crud applications,technology
+how do you connect mongodb to node,technology
+have you used mongoose schemas,technology
+do you know mongodb aggregation,technology
+have you used firebase realtime database,technology
+have you used firestore,technology
+how do you deploy to render,technology
+how do you deploy to vercel,technology
+have you configured cors in express,technology
+do you know what a middleware is,technology
+tell me about hack o nit in detail,certificates
+how did you perform in hack o nit,certificates
+what project did you submit for hack o nit,certificates
+tell me about sih 2025 in detail,certificates
+what project did you build for sih,certificates
+how far did you get in sih,certificates
+tell me about ideon 2025,certificates
+what was the ideon 2025 event about,certificates
+tell me about ihmmc 2025,certificates
+what was the ihmmc event about,certificates
+tell me about the code war workshop,certificates
+what did you learn at the code war workshop,certificates
+tell me about the eduskill ai ml internship,certificates
+what did you do in the ai ml internship,certificates
+tell me about the java nptel course,certificates
+what did you learn in the java course,certificates
+tell me about the python django course,certificates
+what did you learn in the python course,certificates
+tell me about the codsoft web dev certificate,certificates
+what did you build for codsoft certificate,certificates
+tell me about the shadowfox certificate,certificates
+how many hackathons have you attended,certificates
+how many online courses have you completed,certificates
+have you done any google courses,certificates
+have you done any udemy courses,certificates
+have you done any coursera courses,certificates
+do you have any cloud certifications,certificates
+do you have any aws certifications,certificates
+have you done any competitive programming,certificates
+have you participated in leetcode contests,certificates
+have you participated in codeforces,certificates
+have you participated in codechef,certificates
+what is your leetcode profile,certificates
+do you have any dsa certificates,certificates
+what is your biggest extracurricular achievement,certificates
+have you given any tech talks,certificates
+have you mentored anyone,certificates
+what is aniket like as a person,about
+describe aniket in three words,about
+what makes aniket a good developer,about
+what are aniket's strengths as a developer,about
+what are aniket's weaknesses,about
+is aniket a team player,about
+how does aniket approach problem solving,about
+does aniket enjoy coding,about
+is aniket self motivated,about
+does aniket learn quickly,about
+what is aniket currently focused on,about
+what are aniket's long term goals,about
+does aniket like open source,about
+is aniket good at communication,about
+what tech domains interest aniket,about
+is aniket interested in devops,about
+is aniket interested in cybersecurity,about
+is aniket interested in blockchain,about
+does aniket want to become a software engineer,about
+does aniket want to work in product,about
+what is aniket's dream job,about
+where does aniket want to work in future,about
+does aniket want to start a startup,about
+what kind of problems does aniket like to solve,about
+does aniket prefer frontend or backend,about
+is aniket more into web or mobile,about
+does aniket have a technical blog,about
+does aniket write about tech,about
+has aniket spoken at any events,about
+what communities is aniket part of,about
+thank you very much,thanks
+thank you for the information,thanks
+thanks for your help,thanks
+that is exactly what i needed,thanks
+you answered my question,thanks
+that clears things up,thanks
+very informative,thanks
+i learned a lot,thanks
+this was very useful,thanks
+you are very helpful,thanks
+i appreciate your help,thanks
+thanks for clarifying,thanks
+thanks for explaining,thanks
+that makes sense now,thanks
+got it thanks,thanks
+understood thanks,thanks
+noted thanks,thanks
+alright thanks,thanks
+okay thanks,thanks
+makes sense thanks,thanks
+that is all i needed,thanks
+i am satisfied,thanks
+great response,thanks
+good answer,thanks
+nice answer,thanks
+okay i am done,goodbye
+i think that is all,goodbye
+i got everything i needed,goodbye
+i will check back later,goodbye
+see you next time,goodbye
+until we meet again,goodbye
+have a good one,goodbye
+wishing you well,goodbye
+take care aniket,goodbye
+bye bye,goodbye
+tata,goodbye
+cheerio,goodbye
+so long,goodbye
+peace out,goodbye
+i am off now,goodbye
+i gotta run,goodbye
+signing off,goodbye
+logging off,goodbye
+i will reach out later,goodbye
+ok i will leave now,goodbye
+what all topics can you answer,help
+what information can i get here,help
+what are the things i can ask,help
+how do i find out about his skills,help
+how do i find out about his projects,help
+how do i find his contact,help
+can you explain what you do,help
+what is this chatbot for,help
+tell me how to use this bot,help
+i am not sure what to ask,help
+suggest something for me to ask,help
+what should a recruiter ask,help
+what should a client ask,help
+what should a collaborator ask,help
+give me a starting point,help
+i want to know everything,help
+give me a full tour,help
+take me through everything,help
+what is the most popular question,help
+what do most people ask,help
+give me some question suggestions,help
+what are your best responses,help
+what do you know the most about,help
+are you limited to certain topics,help
+can you answer any question,help
+do you only answer portfolio questions,help
+what are your limitations,help
+can you help me decide if i should hire him,help
+how can i evaluate aniket through you,help
+what would you recommend i ask first,help
+explain how react works,technology
+explain how nodejs works,technology
+explain how mongodb works,technology
+explain how python works,technology
+explain how socket io works,technology
+explain how express works,technology
+explain how firebase works,technology
+explain how flask works,technology
+explain how django works,technology
+explain how redux works,technology
+explain how webrtc works,technology
+explain how graphql works,technology
+explain how tailwind works,technology
+explain how jwt works,technology
+explain how git works,technology
+how do you use react in your projects,technology
+how do you use nodejs in your projects,technology
+how do you use mongodb in your projects,technology
+how do you use python in your projects,technology
+how do you use socket io in your projects,technology
+how do you use express in your projects,technology
+how do you use firebase in your projects,technology
+how do you use flask in your projects,technology
+how do you implement react hooks,technology
+how do you implement authentication,technology
+how do you implement real time features,technology
+how do you implement rest api,technology
+how do you implement database connection,technology
+how do you implement state management,technology
+how do you implement routing in react,technology
+describe your react knowledge,technology
+describe your nodejs knowledge,technology
+describe your mongodb knowledge,technology
+describe your python knowledge,technology
+describe your javascript knowledge,technology
+describe your css knowledge,technology
+walk me through react,technology
+walk me through nodejs,technology
+walk me through mongodb,technology
+walk me through your python usage,technology
+what is your react workflow,technology
+what is your nodejs workflow,technology
+what is your database workflow,technology
+how deep is your react knowledge,technology
+how deep is your nodejs knowledge,technology
+how deep is your python knowledge,technology
+what can you build with react,technology
+what can you build with nodejs,technology
+what can you build with python,technology
+what do you know about react ecosystem,technology
+what do you know about node ecosystem,technology
+rate your react skills,skills
+rate your javascript skills,skills
+rate your python skills,skills
+rate your nodejs skills,skills
+rate your css skills,skills
+rate your mongodb skills,skills
+what is your skill rating in react,skills
+what is your skill rating in python,skills
+what is your skill set,skills
+what is your complete skillset,skills
+list all your technical skills,skills
+list all your programming skills,skills
+list all your frontend skills,skills
+list all your backend skills,skills
+list all your tools,skills
+what are your top skills,skills
+what are your core skills,skills
+what are your key skills,skills
+what are your main skills,skills
+what are your best skills,skills
+how skilled are you in web development,skills
+how skilled are you in full stack,skills
+how skilled are you in mern stack,skills
+how skilled are you in python,skills
+what is your technical profile,skills
+give me your technical profile,skills
+show me your skill set,skills
+show me your technical profile,skills
+what technologies are in your arsenal,skills
+what is in your developer toolkit,skills
+what is aniket passionate about,about
+what does aniket love doing,about
+what excites aniket about coding,about
+tell me aniket's story,about
+how did aniket start coding,about
+why did aniket become a developer,about
+what is aniket's vision,about
+what is aniket's mission,about
+what kind of human is aniket,about
+what are aniket's personal values,about
+is aniket hardworking,about
+is aniket creative,about
+is aniket a quick learner,about
+what makes aniket different from other developers,about
+why should i hire aniket,about
+what value does aniket bring,about
+tell me why aniket is a good fit,about
+what is special about aniket,about
+describe aniket as a professional,about
+what is aniket's professional identity,about
+what branch did aniket study,education
+what is aniket's degree,education
+what is aniket's college,education
+what did aniket score in college,education
+what is aniket studying,education
+how is aniket doing academically,education
+is aniket good at academics,education
+tell me about aniket's university,education
+where does aniket go to college,education
+what engineering college does aniket attend,education
+is aniket a btech student,education
+is aniket in computer science,education
+what is aniket's academic score,education
+what is aniket's college cgpa,education
+what year is aniket in college,education
+when does aniket graduate,education
+where is aniket studying,education
+what is aniket's university name,education
+which college did aniket get into,education
+is aniket a good student,education
+goodbye aniket,goodbye
+bye aniket,goodbye
+see you aniket,goodbye
+take care aniket,goodbye
+good night aniket,goodbye
+have a good night,goodbye
+good night sleep well,goodbye
+have a wonderful day,goodbye
+have a wonderful evening,goodbye
+it was great meeting you,goodbye
+nice chatting with you,goodbye
+nice talking with you,goodbye
+lovely talking with you,goodbye
+thanks and goodbye,goodbye
+thanks and bye,goodbye
+alright i am done here,goodbye
+that will be all,goodbye
+nothing more for now,goodbye
+i think i am done,goodbye
+i got all i needed goodbye,goodbye
+need help with something,help
+how do i navigate this chatbot,help
+what is the purpose of this chatbot,help
+how does this portfolio chatbot work,help
+what can this bot tell me,help
+what does this assistant know,help
+can this bot answer all questions,help
+what kind of bot is this,help
+is this an ai chatbot,help
+what was this chatbot built for,help
+how can i learn about aniket,help
+where do i start to know about aniket,help
+what is the best question to ask first,help
+i want to know about aniket where do i start,help
+tell me everything you know,help
+give me all information,help
+i need a complete overview,help
+give me a summary of everything,help
+what can you summarize for me,help
+summarize aniket for me,help
