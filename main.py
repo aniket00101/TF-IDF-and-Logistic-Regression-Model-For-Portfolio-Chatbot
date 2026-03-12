@@ -37,43 +37,108 @@ print(f"Model loaded | Intents: {list(MODEL.classes_)}")
 
 CONFIDENCE_THRESHOLD = 0.32
 
+
 INAPPROPRIATE_KEYWORDS = [
-    "gay", "lesbian", "bisexual", "transgender", "queer", "straight", "sexuality",
-    "sexual", "sex", "nude", "naked", "porn", "nsfw", "hot", "ugly", "fat", "skinny",
+    "gay", "lesbian", "bisexual", "transgender", "transsexual", "transphobic",
+    "queer", "straight", "heterosexual", "homosexual", "sexuality", "pansexual",
+    "asexual", "nonbinary", "intersex", "crossdresser",
+    "sexual", "sex", "nude", "naked", "porn", "pornography", "nsfw", "xxx",
+    "erotic", "genitals", "intercourse", "orgasm", "masturbate", "rape",
+    "molest", "harass", "grope", "pervert", "fetish", "bdsm", "prostitute",
+    "escort", "strip", "boobs", "breast", "penis", "vagina", "condom",
+    "ugly", "fat", "skinny", "obese", "overweight", "anorexic", "bald",
+    "short", "tall", "dark", "fair", "complexion", "body", "looks",
     "girlfriend", "boyfriend", "wife", "husband", "dating", "single", "married",
-    "kiss", "love life", "romantic", "affair", "virgin", "religion", "caste",
-    "racist", "racism", "political", "vote", "drug", "smoke", "drink", "alcohol",
-    "fight", "hate", "kill", "die", "death", "murder", "suicide", "assault",
-    "curse", "stupid", "idiot", "dumb", "loser", "fool",
+    "divorced", "breakup", "cheating", "affair", "crush", "flirt", "kiss",
+    "love life", "romantic", "virgin", "hook up", "hookup", "fwb", "ex",
+    "propose", "relationship", "partner", "fiance", "fiancee",
+    "religion", "religious", "caste", "hindu", "muslim", "christian", "sikh",
+    "brahmin", "dalit", "temple", "mosque", "church", "god", "allah", "pray",
+    "atheist", "agnostic", "sect", "cult", "jihad", "blasphemy",
+    "racist", "racism", "casteist", "discrimination", "bigot", "prejudice",
+    "slur", "xenophobic", "antisemitic", "islamophobic", "whitewash",
+    "colorism", "untouchable",
+    "political", "politics", "vote", "election", "bjp", "congress", "aap",
+    "modi", "rahul", "trump", "democrat", "republican", "communist",
+    "socialist", "fascist", "dictator", "coup", "protest", "riot",
+    "drug", "drugs", "cocaine", "heroin", "weed", "marijuana", "cannabis",
+    "smoke", "smoking", "cigarette", "tobacco", "drunk", "drink", "alcohol",
+    "beer", "wine", "vodka", "whiskey", "intoxicated", "addict", "overdose",
+    "high", "stoned", "tripping",
+    "fight", "fighting", "punch", "slap", "beat", "attack", "stab", "shoot",
+    "gun", "weapon", "bomb", "explosive", "terrorist", "terrorism", "hostage",
+    "kill", "killing", "die", "dead", "death", "murder", "suicide", "assault",
+    "abuse", "torture", "execution", "genocide", "massacre", "threat", "threaten",
+    "curse", "stupid", "idiot", "dumb", "loser", "fool", "moron", "imbecile",
+    "retard", "jerk", "asshole", "bastard", "bitch", "crap", "shit", "damn",
+    "hell", "wtf", "screw", "pathetic", "useless", "worthless", "creep",
+    "weirdo", "psycho", "lunatic", "mad", "crazy", "insane", "freak",
+    "trash", "garbage", "disgusting", "gross", "filthy", "nasty",
+    "depressed", "depression", "anxiety", "bipolar", "schizophrenic",
+    "mentally ill", "psychotic", "disorder", "therapy", "therapist",
+    "asylum", "mental hospital", "bet", "gamble", "gambling", "casino", "lottery", "scam", "fraud",
+    "cheat", "steal", "thief", "robbery", "blackmail", "bribe",
 ]
 
 PERSONAL_GENDER_KEYWORDS = [
-    "gender", "male", "female", "boy", "girl", "man", "woman", "he", "she",
-    "his", "her", "him",
+    "gender", "male", "female", "boy", "girl", "man", "woman",
+    "gentleman", "lady", "gent", "dude", "bro", "guy", "lad",
+    "he", "she", "his", "her", "him", "they", "them",
+    "who is he", "what is he", "is he a", "is aniket a",
+    "what gender", "which gender", "what sex", "which sex",
+    "is he male", "is he female", "is he a boy", "is he a girl",
+    "is aniket male", "is aniket female", "is aniket a boy", "is aniket a girl",
 ]
 
 def check_filter(message: str):
     """
     Returns (is_filtered, response) tuple.
     If is_filtered is True, return the response directly without hitting ML model.
+    Handles both single words and multi-word phrases.
     """
-    msg = message.lower().strip()
+    msg        = message.lower().strip()
+    msg_words  = set(msg.split())         
+    msg_padded = f" {msg} "                
 
-    for word in INAPPROPRIATE_KEYWORDS:
-        if word in msg.split() or f" {word} " in f" {msg} ":
-            return True, random.choice([
-                "I'm only here to answer questions about Aniket's professional portfolio. "
-                "Feel free to ask about his skills, projects, or experience! 😊",
-                "That's outside what I can help with. I'm a portfolio assistant — "
-                "try asking about Aniket's work, education, or contact info!",
-                "I can only answer professional questions about Aniket Das. "
-                "Ask me about his tech stack, projects, or how to hire him! 😊",
-            ])
+    for keyword in INAPPROPRIATE_KEYWORDS:
 
-    has_personal = any(word in msg.split() or f" {word} " in f" {msg} " for word in PERSONAL_GENDER_KEYWORDS)
-    has_name     = "aniket" in msg
+        if " " in keyword:
+            if keyword in msg:
+                return True, random.choice([
+                    "I'm only here to answer questions about Aniket's professional portfolio. "
+                    "Feel free to ask about his skills, projects, or experience! 😊",
+                    "That's outside what I can help with. I'm a portfolio assistant — "
+                    "try asking about Aniket's work, education, or how to contact him!",
+                    "I can only answer professional questions about Aniket Das. "
+                    "Ask me about his tech stack, projects, or availability! 😊",
+                ])
+        else:
+            if keyword in msg_words or f" {keyword} " in msg_padded \
+               or msg.startswith(f"{keyword} ") or msg.endswith(f" {keyword}") \
+               or msg == keyword:
+                return True, random.choice([
+                    "I'm only here to answer questions about Aniket's professional portfolio. "
+                    "Feel free to ask about his skills, projects, or experience! 😊",
+                    "That's outside what I can help with. I'm a portfolio assistant — "
+                    "try asking about Aniket's work, education, or how to contact him!",
+                    "I can only answer professional questions about Aniket Das. "
+                    "Ask me about his tech stack, projects, or availability! 😊",
+                ])
+            
+    has_name = "aniket" in msg
 
-    if has_personal and (has_name or "he" in msg.split() or "his" in msg.split()):
+    has_gender_word = False
+    for keyword in PERSONAL_GENDER_KEYWORDS:
+        if " " in keyword:
+            if keyword in msg:
+                has_gender_word = True
+                break
+        else:
+            if keyword in msg_words:
+                has_gender_word = True
+                break
+
+    if has_gender_word and (has_name or "he" in msg_words or "his" in msg_words):
         return True, (
             "Aniket Das is a male developer from Kolkata, India. 👨‍💻\n\n"
             "He is a B.Tech Computer Science student at Narula Institute of Technology "
