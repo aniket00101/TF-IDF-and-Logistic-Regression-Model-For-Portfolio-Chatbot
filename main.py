@@ -14,7 +14,6 @@ from pydantic import BaseModel
 from portfolio_data import ABOUT, SKILLS, PROJECTS, EXPERIENCE, EDUCATION, CERTIFICATES, CONTACT
 from tech_info import TECH_INFO
 
-# ── NLTK setup ─────────────────────────────────────────────────────────────────
 nltk.download("stopwords", quiet=True)
 nltk.download("wordnet",   quiet=True)
 nltk.download("omw-1.4",   quiet=True)
@@ -30,23 +29,18 @@ def preprocess(text: str) -> str:
     tokens = [lemmatizer.lemmatize(t) for t in tokens if t not in stop_words]
     return " ".join(tokens)
 
-
-# ── Load trained model ─────────────────────────────────────────────────────────
 with open("trainedmodel/intent_model.pkl", "rb") as f:
     MODEL = pickle.load(f)
 
-print(f"✅ Model loaded | Intents: {list(MODEL.classes_)}")
+print(f" Model loaded | Intents: {list(MODEL.classes_)}")
 
 CONFIDENCE_THRESHOLD = 0.32
 
-
-# ── Response Builder ───────────────────────────────────────────────────────────
 def build_response(intent: str, user_message: str) -> str:
     msg  = user_message.lower()
     hour = datetime.now().hour
     time_greet = "Good morning" if hour < 12 else ("Good afternoon" if hour < 17 else "Good evening")
 
-    # ── greeting ──────────────────────────────────────────────────────────────
     if intent == "greeting":
         return (
             f"{time_greet}! 👋 I'm Aniket's AI portfolio assistant.\n"
@@ -54,7 +48,6 @@ def build_response(intent: str, user_message: str) -> str:
             "What would you like to explore? 😊"
         )
 
-    # ── about ─────────────────────────────────────────────────────────────────
     if intent == "about":
         passions = ", ".join(ABOUT["passion"])
         exploring = ", ".join(ABOUT["currently_exploring"])
@@ -65,7 +58,6 @@ def build_response(intent: str, user_message: str) -> str:
             f"🚀 Exploring  : {exploring}"
         )
 
-    # ── skills ────────────────────────────────────────────────────────────────
     if intent == "skills":
         return (
             "Here's Aniket's complete tech stack:\n\n"
@@ -77,9 +69,8 @@ def build_response(intent: str, user_message: str) -> str:
             "Ask me about any specific technology for more details!"
         )
 
-    # ── projects ──────────────────────────────────────────────────────────────
     if intent == "projects":
-        # Check if asking about a specific project
+       
         for proj in PROJECTS:
             keywords = [proj["short"]] + proj["short"].split()
             if any(kw in msg for kw in keywords):
@@ -93,7 +84,7 @@ def build_response(intent: str, user_message: str) -> str:
                     f"📂 Source     : {proj['source']}\n"
                     f"📌 Status     : {proj['status']}"
                 )
-        # General projects list
+       
         lines = "\n".join([
             f"  {i+1}. {p['name']} ({p['status']})"
             for i, p in enumerate(PROJECTS)
@@ -103,7 +94,6 @@ def build_response(intent: str, user_message: str) -> str:
             "Ask me about any specific project for full details, live link, and source code!"
         )
 
-    # ── experience ────────────────────────────────────────────────────────────
     if intent == "experience":
         result = "💼 Work Experience\n\n"
         for exp in EXPERIENCE:
@@ -114,7 +104,6 @@ def build_response(intent: str, user_message: str) -> str:
             )
         return result.strip()
 
-    # ── education ─────────────────────────────────────────────────────────────
     if intent == "education":
         edu = EDUCATION
         return (
@@ -127,7 +116,6 @@ def build_response(intent: str, user_message: str) -> str:
             "He combines strong academics with real-world full-stack and ML project experience!"
         )
 
-    # ── certificates ──────────────────────────────────────────────────────────
     if intent == "certificates":
         lines = "\n".join([
             f"  {i+1}. {c['title']} — {c['date']} ({c['type']})"
@@ -140,7 +128,6 @@ def build_response(intent: str, user_message: str) -> str:
             "and earned course certificates in Java, Python, AI/ML, and Web Development!"
         )
 
-    # ── contact ───────────────────────────────────────────────────────────────
     if intent == "contact":
         return (
             "📬 Here's how to reach Aniket:\n\n"
@@ -151,7 +138,6 @@ def build_response(intent: str, user_message: str) -> str:
             "Feel free to reach out for collaborations, freelance work, or job opportunities!"
         )
 
-    # ── hiring ────────────────────────────────────────────────────────────────
     if intent == "hiring":
         return (
             "✅ Aniket is currently open to new opportunities!\n\n"
@@ -164,7 +150,6 @@ def build_response(intent: str, user_message: str) -> str:
             f"💼 LinkedIn    : {CONTACT['linkedin']}"
         )
 
-    # ── technology ────────────────────────────────────────────────────────────
     if intent == "technology":
         for tech, info in TECH_INFO.items():
             if tech in msg:
@@ -175,7 +160,6 @@ def build_response(intent: str, user_message: str) -> str:
             "Ask me about any specific technology for a detailed answer!"
         )
 
-    # ── thanks ────────────────────────────────────────────────────────────────
     if intent == "thanks":
         return random.choice([
             "You're very welcome! 😊 Feel free to ask anything else about Aniket's work.",
@@ -183,11 +167,9 @@ def build_response(intent: str, user_message: str) -> str:
             "Glad I could help! Ask me anything else about Aniket. 😊",
         ])
 
-    # ── goodbye ───────────────────────────────────────────────────────────────
     if intent == "goodbye":
         return "Goodbye! 👋 It was great chatting. Don't hesitate to reach out to Aniket — have a wonderful day!"
 
-    # ── help ──────────────────────────────────────────────────────────────────
     if intent == "help":
         return (
             "Here's what I can help you with:\n\n"
@@ -203,15 +185,12 @@ def build_response(intent: str, user_message: str) -> str:
             "Just ask naturally — I'll understand! 😊"
         )
 
-    # ── fallback ──────────────────────────────────────────────────────────────
     return random.choice([
         "Hmm, I'm not sure about that. Try asking about Aniket's skills, projects, or experience! 🤔",
         "I didn't quite get that. You can ask about his tech stack, projects, education, or contact info!",
         "Could you rephrase that? I'm best at answering questions about Aniket's portfolio. 😊",
     ])
 
-
-# ── FastAPI App ────────────────────────────────────────────────────────────────
 app = FastAPI(title="Aniket Portfolio Chatbot API", version="2.0.0")
 
 app.add_middleware(
@@ -233,7 +212,7 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 def root():
-    return {"status": "✅ Aniket's Portfolio Chatbot API is running!", "version": "2.0.0"}
+    return {"status": "Aniket's Portfolio Chatbot API is running!", "version": "2.0.0"}
 
 @app.get("/health")
 def health():
