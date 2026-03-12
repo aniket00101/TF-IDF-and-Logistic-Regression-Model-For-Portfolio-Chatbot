@@ -29,12 +29,59 @@ def preprocess(text: str) -> str:
     tokens = [lemmatizer.lemmatize(t) for t in tokens if t not in stop_words]
     return " ".join(tokens)
 
+
 with open("trainedmodel/intent_model.pkl", "rb") as f:
     MODEL = pickle.load(f)
 
-print(f" Model loaded | Intents: {list(MODEL.classes_)}")
+print(f"Model loaded | Intents: {list(MODEL.classes_)}")
 
 CONFIDENCE_THRESHOLD = 0.32
+
+INAPPROPRIATE_KEYWORDS = [
+    "gay", "lesbian", "bisexual", "transgender", "queer", "straight", "sexuality",
+    "sexual", "sex", "nude", "naked", "porn", "nsfw", "hot", "ugly", "fat", "skinny",
+    "girlfriend", "boyfriend", "wife", "husband", "dating", "single", "married",
+    "kiss", "love life", "romantic", "affair", "virgin", "religion", "caste",
+    "racist", "racism", "political", "vote", "drug", "smoke", "drink", "alcohol",
+    "fight", "hate", "kill", "die", "death", "murder", "suicide", "assault",
+    "curse", "stupid", "idiot", "dumb", "loser", "fool",
+]
+
+PERSONAL_GENDER_KEYWORDS = [
+    "gender", "male", "female", "boy", "girl", "man", "woman", "he", "she",
+    "his", "her", "him",
+]
+
+def check_filter(message: str):
+    """
+    Returns (is_filtered, response) tuple.
+    If is_filtered is True, return the response directly without hitting ML model.
+    """
+    msg = message.lower().strip()
+
+    for word in INAPPROPRIATE_KEYWORDS:
+        if word in msg.split() or f" {word} " in f" {msg} ":
+            return True, random.choice([
+                "I'm only here to answer questions about Aniket's professional portfolio. "
+                "Feel free to ask about his skills, projects, or experience! 😊",
+                "That's outside what I can help with. I'm a portfolio assistant — "
+                "try asking about Aniket's work, education, or contact info!",
+                "I can only answer professional questions about Aniket Das. "
+                "Ask me about his tech stack, projects, or how to hire him! 😊",
+            ])
+
+    has_personal = any(word in msg.split() or f" {word} " in f" {msg} " for word in PERSONAL_GENDER_KEYWORDS)
+    has_name     = "aniket" in msg
+
+    if has_personal and (has_name or "he" in msg.split() or "his" in msg.split()):
+        return True, (
+            "Aniket Das is a male developer from Kolkata, India. 👨‍💻\n\n"
+            "He is a B.Tech Computer Science student at Narula Institute of Technology "
+            "and a Full Stack Developer passionate about building web applications and ML projects.\n\n"
+            "Would you like to know about his skills, projects, or how to contact him?"
+        )
+
+    return False, ""
 
 def build_response(intent: str, user_message: str) -> str:
     msg  = user_message.lower()
@@ -70,7 +117,6 @@ def build_response(intent: str, user_message: str) -> str:
         )
 
     if intent == "projects":
-       
         for proj in PROJECTS:
             keywords = [proj["short"]] + proj["short"].split()
             if any(kw in msg for kw in keywords):
@@ -84,7 +130,6 @@ def build_response(intent: str, user_message: str) -> str:
                     f"📂 Source     : {proj['source']}\n"
                     f"📌 Status     : {proj['status']}"
                 )
-       
         lines = "\n".join([
             f"  {i+1}. {p['name']} ({p['status']})"
             for i, p in enumerate(PROJECTS)
@@ -195,7 +240,7 @@ app = FastAPI(title="Aniket Portfolio Chatbot API", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # 🔒 Replace with your Vercel URL in production
+    allow_origins=["*"],
     allow_methods=["POST", "GET"],
     allow_headers=["*"],
 )
@@ -221,8 +266,13 @@ def health():
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest):
     user_msg = req.message.strip()
+
     if not user_msg:
         return ChatResponse(reply="Please say something! 😊", intent="empty", confidence=1.0)
+
+    is_filtered, filtered_reply = check_filter(user_msg)
+    if is_filtered:
+        return ChatResponse(reply=filtered_reply, intent="filtered", confidence=1.0)
 
     processed  = preprocess(user_msg)
     proba      = MODEL.predict_proba([processed])[0]
